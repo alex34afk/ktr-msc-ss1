@@ -1,0 +1,31 @@
+**********DECLARATION DE L'INTERFACE**********
+
+Movable est une Interface
+Procédure Right(:m_get_name())
+Procédure Left(:m_get_name())
+Procédure Back(:m_get_name())
+Procédure Forward(:m_get_name())
+
+**********DECLARATION DES PROCEDURES**********
+
+Procédure Right(name est une chaine)
+
+RENVOYER Info("["+ name + "]:" + " moves right")
+
+Procédure Left(name est une chaine)
+
+RENVOYER Info("["+ name + "]:" + " moves left")
+
+Procédure Back(name est une chaine
+
+RENVOYER Info("["+ name + "]:" + " moves back")
+
+Procédure Forward(name est une chaine)
+
+RENVOYER Info("["+ name + "]:" + " moves forward")
+
+FIN
+
+**********AJOUT DE L'INTERFACE DANS LA CLASSE HEROE(character)**********
+
+Implémente Movable //"Implémente" = mot clé de Windev
