@@ -1,0 +1,53 @@
+*********DECLARATION DE LA CLASSE ET DE SON HERITAGE**********
+Mage est une Classe
+
+hérite de Heroe
+
+FIN
+
+*********CONSTRUCTEUR**********
+
+PROCÉDURE Constructeur()
+
+:m_set_name("Tacos")
+:m_set_RPGClass("Mage")
+:m_set_Strength(3)
+:m_set_life(70)
+:m_set_agility(10)
+:m_set_wit(10)
+
+Info("May the gods be with me")
+
+*********DESTRUCTEUR**********
+
+PROCÉDURE Destructeur()
+
+*********METHODE**********
+
+PROCÉDURE m_attack_target(Weapon est une chaîne)
+
+//EXEMPLE DE SWITCH CASE WINDEV
+
+SELON Majuscule(Weapon)
+	
+	CAS "WAND"
+	 
+		Info("["+ :m_get_name() + "]:" + " RRRrrrrrrrr" + RC + "Feel the power of my wand!") //RC = retour chariot -> retour à la ligne
+		
+	CAS "MAGIC"
+	
+		Info("["+ :m_get_name() + "]:" + " RRRrrrrrrrr" + RC + "Feel the power of my magic!") 
+	
+	AUTRE CAS
+		
+		Info("["+ :m_get_name() + "]:" + " Am I supposed to fight without any weapons buddy?!")
+		
+FIN
+
+**********CREATION CLASSE**********
+
+Example est un MAGE(-1)
+
+Example<-allouer un MAGE(-1)
+
+Example.m_attack_target("WAND")
