@@ -12,9 +12,10 @@ PROCÉDURE Constructeur()
 
 :m_set_name("Toto")
 :m_set_RPGClass("Warrior")
-:m_set_Strength("10")
-:m_set_agility("8")
-:m_set_wit("2")
+:m_set_Strength(10)
+:m_set_agility(8)
+:m_set_wit(2)
+:m_set_life(100)
 
 Info("My name will go down in history!")
 
