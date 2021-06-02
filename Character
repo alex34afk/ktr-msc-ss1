@@ -15,16 +15,23 @@ FIN
 
 *******************************DECLARATION CONSTRUCTEUR*******************************
 
-PROCÉDURE Constructeur(CharacterName est une chaîne, RPGClassCharacter est une chaîne)
+PROCÉDURE Constructeur(CharacterName est une chaîne, RPGClassCharacter est une chaîne,CharacterAgility est un entier, CharacterLife est un entier, 
+CharacterStrenght est un entier, CharacterWit est un entier)
 
 :m_set_RPGClass(RPGClassCharacter)
 :m_set_name(CharacterName)
+:m_set_agility(CharacterAgility)
+:m_set_life(CharacterLife)
+:m_set_strenght(CharacterStrenght)
+:m_set_wit(CharacterWit)
 
 *******************************DECLARATION DESTRUCTEUR*******************************
 
 PROCÉDURE Destructeur()
 
 *******************************GETTERS/SETTERS*******************************
+
+***GETTERS***
 
 PROCÉDURE m_get_name()
 
@@ -54,6 +61,8 @@ PROCÉDURE m_attack(Attack est une chaîne =  " Courage ! Fuyez !" )
 
 Info("["+:m_get_name()+"]:" + Attack)
 
+***SETTERS***
+
 PROCÉDURE m_set_name(CharacterName est une chaîne)
 
 :Name = CharacterName
@@ -62,9 +71,23 @@ PROCÉDURE m_set_RPGClass(RPGClassCharacter est une chaîne)
 
 :RPGClass = RPGClassCharacter
 
+PROCÉDURE m_set_life(CharacterLife est un entier)
+
+:Life = CharacterLife
+
+PROCÉDURE m_set_Agility(CharacterAgility est un entier)
+
+:Agility = CharacterAgility
+
+PROCÉDURE m_set_wit(CharacterWit est un entier)
+
+:Wit = CharacterWit
+
+PROCÉDURE m_set_Strenght(CharacterStrenght est un entier)
+
+:Strenght = CharacterStrenght
 
 *******************************CREATION NOUVELLE CLASSE*******************************
-
 
 Example est un Heroe("","")
 
