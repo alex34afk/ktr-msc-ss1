@@ -1,0 +1,54 @@
+
+*********DECLARATION DE LA CLASSE ET DE SON HERITAGE**********
+Warrior est une Classe
+
+hérite de Heroe
+
+FIN
+
+*********CONSTRUCTEUR**********
+
+PROCÉDURE Constructeur()
+
+:m_set_name("Toto")
+:m_set_RPGClass("Warrior")
+:m_set_Strength("10")
+:m_set_agility("8")
+:m_set_wit("2")
+
+Info("My name will go down in history!")
+
+*********DESTRUCTEUR**********
+
+PROCÉDURE Destructeur()
+
+*********METHODE**********
+
+PROCÉDURE m_attack_target(Weapon est une chaîne)
+
+//EXEMPLE DE SWITCH CASE WINDEV
+
+SELON Majuscule(Weapon)
+	
+	CAS "HAMMER"
+	 
+		Info("["+ :m_get_name() + "]:" + " RRRrrrrrrrr" + RC + "I'll crush you with my hammer !") //RC = retour chariot -> retour à la ligne
+		
+	CAS "SWORD"
+	
+		Info("["+ :m_get_name() + "]:" + " RRRrrrrrrrr" + RC + "I'll crush you with my sword !") 
+	
+	AUTRE CAS
+		
+		Info("["+ :m_get_name() + "]:" + " Am I supposed to fight without any weapons buddy?!")
+		
+FIN
+
+**********CREATION CLASSE**********
+
+Example est un WARRIOR(-1)
+
+Example<-allouer un WARRIOR(-1)
+
+Example.m_attack_target("HAMMER")
+
