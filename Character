@@ -1,0 +1,79 @@
+*******************************DECLARATION CLASSE*******************************
+
+Heroe est une Classe //Forcé de renommer la classe car "character" est un mot réservé de Windev 
+
+*******************************DECLARATION ATTRIBUTS*******************************
+
+Name 		est une chaîne
+RPGClass 	est une chaîne
+Agility 	est un entier = 2  //mes attributs de classe
+Life 		est un entier = 50
+Strenght	est un entier = 2
+Wit 		est un entier = 2
+
+FIN
+
+*******************************DECLARATION CONSTRUCTEUR*******************************
+
+PROCÉDURE Constructeur(CharacterName est une chaîne, RPGClassCharacter est une chaîne)
+
+:m_set_RPGClass(RPGClassCharacter)
+:m_set_name(CharacterName)
+
+*******************************DECLARATION DESTRUCTEUR*******************************
+
+PROCÉDURE Destructeur()
+
+*******************************GETTERS/SETTERS*******************************
+
+PROCÉDURE m_get_name()
+
+RENVOYER :Name
+
+PROCÉDURE m_get_agility()
+
+RENVOYER :Agility
+
+PROCÉDURE m_get_life()
+
+RENVOYER :Life
+
+PROCÉDURE m_get_RPGClass()
+
+RENVOYER :RPGClass
+
+PROCÉDURE m_get_wit()
+
+RENVOYER :m_get_wit()
+
+PROCÉDURE m_get_strenght()
+
+RENVOYER :m_get_strenght()
+
+PROCÉDURE m_attack(Attack est une chaîne =  " Courage ! Fuyez !" )
+
+Info("["+:m_get_name()+"]:" + Attack)
+
+PROCÉDURE m_set_name(CharacterName est une chaîne)
+
+:Name = CharacterName
+
+PROCÉDURE m_set_RPGClass(RPGClassCharacter est une chaîne)
+
+:RPGClass = RPGClassCharacter
+
+
+*******************************CREATION NOUVELLE CLASSE*******************************
+
+
+Example est un Heroe("","")
+
+Example <- allouer un Heroe("Tyrande","Healer")
+
+Info(Example.m_get_name())
+Info(Example.m_get_life())
+Info(Example.m_get_wit())
+Info(Example.m_get_strenght())
+Info(Example.m_get_agility())
+
+Example.m_attack() //Argument absent car déjà déclaré au préalable dans la classe
