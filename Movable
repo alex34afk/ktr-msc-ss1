@@ -1,31 +1,99 @@
 **********DECLARATION DE L'INTERFACE**********
 
 Movable est une Interface
-Procédure Right(:m_get_name())
-Procédure Left(:m_get_name())
-Procédure Back(:m_get_name())
-Procédure Forward(:m_get_name())
+Procédure Right()
+Procédure Left()
+Procédure Back()
+Procédure Forward()
 
-**********DECLARATION DES PROCEDURES**********
+**********DECLARATION DES PROCEDURES DE L'INTERFACE**********
 
-Procédure Right(name est une chaine)
+Procédure Right()
 
-RENVOYER Info("["+ name + "]:" + " moves right")
+RENVOYER Info("moves right")
 
-Procédure Left(name est une chaine)
+Procédure Left()
 
-RENVOYER Info("["+ name + "]:" + " moves left")
+RENVOYER Info("moves left")
 
-Procédure Back(name est une chaine
+Procédure Back()
 
-RENVOYER Info("["+ name + "]:" + " moves back")
+RENVOYER Info("moves back")
 
-Procédure Forward(name est une chaine)
+Procédure Forward()
 
-RENVOYER Info("["+ name + "]:" + " moves forward")
+RENVOYER Info("moves forward")
 
 FIN
 
 **********AJOUT DE L'INTERFACE DANS LA CLASSE HEROE(character)**********
 
 Implémente Movable //"Implémente" = mot clé de Windev
+
+Procédure Right()
+
+RENVOYER Info("["+ name + "]:" + " moves right")
+
+Procédure Left()
+
+RENVOYER Info("["+ name + "]:" + " moves left")
+
+Procédure Back()
+
+RENVOYER Info("["+ name + "]:" + " moves back")
+
+Procédure Forward()
+
+RENVOYER Info("["+ name + "]:" + " moves forward")
+
+**********OVERLOADING CLASSE WARRIOR**********
+Implémente Movable //"Implémente" = mot clé de Windev
+
+Procédure Right()
+
+RENVOYER Info("["+ name + "]:" + " moves right like a bad boy")
+
+Procédure Left()
+
+RENVOYER Info("["+ name + "]:" + " moves left like a bad boy")
+
+Procédure Back()
+
+RENVOYER Info("["+ name + "]:" + " moves back like a bad boy")
+
+Procédure Forward()
+
+RENVOYER Info("["+ name + "]:" + " moves forward like a bad boy")
+
+**********OVERLOADING CLASSE MAGE**********
+
+Implémente Movable //"Implémente" = mot clé de Windev
+
+Procédure Right()
+
+RENVOYER Info("["+ name + "]:" + " moves right furtively")
+
+Procédure Left()
+
+RENVOYER Info("["+ name + "]:" + " moves left furtively")
+
+Procédure Back()
+
+RENVOYER Info("["+ name + "]:" + " moves back furtively")
+
+Procédure Forward()
+
+RENVOYER Info("["+ name + "]:" + " moves forward furtively")
+
+**********RESULTAT**********
+
+mage.Right()
+mage.Left()
+mage.Forward()
+mage.Back()
+
+warrior.Right()
+warrior.Left()
+warrior.Forward()
+warrior.Back()
+
