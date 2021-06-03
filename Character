@@ -57,7 +57,15 @@ PROCÉDURE m_get_strenght()
 
 RENVOYER :m_get_strenght()
 
+***PROCEDURE m_attack***
+
 PROCÉDURE m_attack(Attack est une chaîne =  " Courage ! Fuyez !" )
+
+RENVOYER Info("["+ :m_get_name()+"]:" + Attack)
+
+***PROCEDURE m_unsheathe()***
+
+RENVOYER Info("["+ :m_get_name()+"]:" + " unsheathes his weapon"
 
 Info("["+:m_get_name()+"]:" + Attack)
 
