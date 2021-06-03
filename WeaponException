@@ -46,7 +46,7 @@ WeaponE <-allouer un WEAPONEXCEPTION(weapon,:m_get_rgbClass)
 
 PROCEDURE m_tryToAttack(weapon est une chaine)
 
-:m_attack(:m_get_weapon())
+:m_attack_target(:m_get_weapon())
 
 
 
