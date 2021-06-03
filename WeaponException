@@ -9,7 +9,7 @@ weapon est une chaine // attribut
 
 **********DECLARATION DES METHODES**********
 
-PROCEDURE m_set_weapon()
+PROCEDURE m_get_weapon()
 
 RENVOYER :weapon
 
@@ -21,19 +21,19 @@ RENVOYER Info("I refuse to fight with my bare hands .")
 
 FIN
 
-SI characterWeapon <>"" ET RGBClass = "Mage" ET characterWeapon <> Majuscule("Wand") ou Majuscule("Magic) ALORS
+SI :m_get_weapon() <>"" ET :m_get_RGBClass() = "Mage" ET :m_get(characterWeapon) <> Majuscule("Wand") ou Majuscule("Magic") ALORS
 
 PROCEDURE m_wrongWeaponMage(weapon est une chaine)
 
-RENVOYER Info("I don't need this stupid [ " + weapon + "]! Don 't misjudge my powers !")
+RENVOYER Info("I don't need this stupid [ " + :m_get_weapon() + "]! Don 't misjudge my powers !")
 
 FIN
 
-SI characterWeapon <>"" ET RGBClass = "Warrior" ET characterWeapon <> Majuscule("Hammer") ou Majuscule("Sword") ALORS
+SI :m_get_weapon(characterWeapon)<>"" ET :m_get_RGBClass() = "Warrior" ET :m_get_characterWeapon() <> Majuscule("Hammer") ou Majuscule("Sword") ALORS
 
 PROCEDURE m_wrongWeaponWarrior(weapon est une chaine)
 
-RENVOYER Info("I don't need this stupid [ " + weapon + "]! Don 't misjudge my powers !")
+RENVOYER Info("I don't need this stupid [ " + :m_get_weapon() + "]! Don 't misjudge my powers !")
 
 FIN
 
@@ -46,7 +46,7 @@ WeaponE <-allouer un WEAPONEXCEPTION(weapon,:m_get_rgbClass)
 
 PROCEDURE m_tryToAttack(weapon est une chaine)
 
-:m_attack(weapon)
+:m_attack(:m_get_weapon())
 
 
 
