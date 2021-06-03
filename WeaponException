@@ -1,0 +1,52 @@
+**********DECLARATION DE LA CLASSE**********
+Hérite de Exceptions
+
+weapon est une chaine // attribut
+
+*********CONSTRUCTEUR(characterWeapon est une chaine,RGBClass est une chaine)********
+
+:m_set_weapon(characterWeapon)
+
+**********DECLARATION DES METHODES**********
+
+PROCEDURE m_set_weapon()
+
+RENVOYER :weapon
+
+SI characterWeapon = "" ALORS
+
+PROCEDURE m_noWeapon(weapon est une chaine) //Si le weapon est vide, alors...
+
+RENVOYER Info("I refuse to fight with my bare hands .")
+
+FIN
+
+SI characterWeapon <>"" ET RGBClass = "Mage" ET characterWeapon <> Majuscule("Wand") ou Majuscule("Magic) ALORS
+
+PROCEDURE m_wrongWeaponMage(weapon est une chaine)
+
+RENVOYER Info("I don't need this stupid [ " + weapon + "]! Don 't misjudge my powers !")
+
+FIN
+
+SI characterWeapon <>"" ET RGBClass = "Warrior" ET characterWeapon <> Majuscule("Hammer") ou Majuscule("Sword") ALORS
+
+PROCEDURE m_wrongWeaponWarrior(weapon est une chaine)
+
+RENVOYER Info("I don't need this stupid [ " + weapon + "]! Don 't misjudge my powers !")
+
+FIN
+
+**********IMPLANTATION DE LA CLASSE WeaponException dans m_attack(weapon est une chaine)**********
+
+WeaponE est un WEAPONEXCEPTION("")
+WeaponE <-allouer un WEAPONEXCEPTION(weapon,:m_get_rgbClass)
+
+**********IMPLANTATION DANS LA CLASSE HEROE(character) DE L'EXCEPTION**********
+
+PROCEDURE m_tryToAttack(weapon est une chaine)
+
+:m_attack(weapon)
+
+
+
